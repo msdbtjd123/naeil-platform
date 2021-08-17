@@ -22,7 +22,7 @@
     Note: This is a platform that many people who dream of becoming security experts can use to improve their skills.
 
 
-- ### How to Use?
+- ### How to Use? (You must have openstack installed.)
     - This platform is designed for the openstack train version.
     - You must enter the db password for each account in the /naeil-package/openrc directory.
    ```markdown
