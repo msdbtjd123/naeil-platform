@@ -1,32 +1,37 @@
-# Cyber Aegis Training Platform
+# Naeil Platform
 
-## Naeil Platform
-
-_Note: This is a platform that many people who dream of becoming security experts can use to improve their skills._
+## Cyber Aegis Training Platform
 
 - [Sections](#sections)
-  - [Title](#title)
-  - [Banner](#banner)
-  - [Badges](#badges)
-  - [Short Description](#short-description)
-  - [Long Description](#long-description)
-  - [Table of Contents](#table-of-contents-1)
-  - [Security](#security)
-  - [Background](#background)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Extra Sections](#extra-sections)
-  - [API](#api)
-  - [Maintainers](#maintainers)
-  - [Thanks](#thanks)
-  - [Contributing](#contributing)
-  - [License](#license)
-- [Definitions](#definitions)
+  - [Title](#Title)
+  - [What is Naeil Platform?](#What is Naeil Platform?)
+  - [Web Images](#Web Images)
+  - [Utilization Technology](#Utilization Technology)
 
 ## Sections
 
 ### Title
-**Status:** Required.
+**Cyber Aegis Training Platform**
+
+
+### What is Naeil Platform?
+- Note: This is a platform that many people who dream of becoming security experts can use to improve their skills.
+![image](https://user-images.githubusercontent.com/55818230/129669660-2298e247-0c2e-4aaa-bc77-48fd9ec4f8b7.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **Requirements:**
 - Title must match repository, folder and package manager names - or it may have another, relevant title with the repository, folder, and package manager title next to it in italics and in parentheses. For instance:
