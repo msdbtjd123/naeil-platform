@@ -3,10 +3,10 @@
 - Cyber Aegis Training Platform
 
 - [Sections](#sections)
-  - [Title](#Title)
-  - [What is Naeil Platform?] (#What is Naeil Platform?)
-  - [Web Images] (#Web Images)
-  - [Utilization Technology] (#Utilization Technology)
+  - [Title] (#Title)
+  - [What is Naeil Platform?] (#What-is-Naeil-Platform?)
+  - [Web Images] (#Web-Images)
+  - [Utilization Technology] (#Utilization-Technology)
 
 ## Sections
 
