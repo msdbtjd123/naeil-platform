@@ -26,7 +26,7 @@
     - This platform is designed for the openstack train version.
     - You must enter the db password for each account in the /naeil-package/openrc directory.
     ```markdown
-   # /naeil-package/openrc/* 
+       # /naeil-package/openrc/* 
     ```
 
 
