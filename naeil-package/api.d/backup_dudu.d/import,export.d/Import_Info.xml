@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE CyberAegis[
+<!ELEMENT vCenter (#PCDATA|add_image)*>
+	<!ATTLIST vCenter auth_url CDATA #IMPLIED>
+	<!ATTLIST vCenter project_name CDATA #REQUIRED>
+	<!ATTLIST vCenter username CDATA #REQUIRED>
+	<!ATTLIST vCenter password CDATA #REQUIRED>
+	<!ATTLIST vCenter user_domain_id CDATA #REQUIRED>
+	<!ATTLIST vCenter project_domain_id CDATA #REQUIRED>
+	<!ELEMENT add_image (#PCDATA)>
+		<!ATTLIST add_image name CDATA #REQUIRED>
+		<!ATTLIST add_image path CDATA #REQUIRED>
+		<!ATTLIST add_image format CDATA #REQUIRED>
+]>
+<vCenter>
+	<host
+		auth_url="http://192.168.214.120:5000/v3"
+		project_name="1-Team"
+		username="user01"
+		password="user01"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+
+		<add_image name="New-CentOS7-Minimal-origin.qcow2" path="/root/openstack.d/images.d/" format="qcow2"> </add_image>
+
+	</host>
+
+	<host
+		auth_url="http://192.168.214.120:5000/v3"
+		project_name="2-Team"
+		username="user02"
+		password="user02"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+
+		<add_image name="New-CentOS7-Minimal-origin.qcow2" path="/root/openstack.d/images.d/" format="qcow2"> </add_image>
+
+	</host>
+
+</vCenter>
+

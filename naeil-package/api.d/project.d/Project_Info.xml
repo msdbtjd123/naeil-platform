@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE CyberAegis[
+<!ELEMENT vCenter (#PCDATA|add_project)*>
+	<!ATTLIST vCenter auth_url CDATA #IMPLIED>
+	<!ATTLIST vCenter project_name CDATA #REQUIRED>
+	<!ATTLIST vCenter username CDATA #REQUIRED>
+	<!ATTLIST vCenter password CDATA #REQUIRED>
+	<!ATTLIST vCenter user_domain_id CDATA #REQUIRED>
+	<!ATTLIST vCenter project_domain_id CDATA #REQUIRED>
+	<!ELEMENT add_project (#PCDATA)>
+		<!ATTLIST add_project p_name CDATA #REQUIRED>
+		<!ATTLIST add_project name CDATA #REQUIRED>
+]>
+<vCenter
+	auth_url="http://203.252.240.80:5000/v3"
+	project_name="admin"
+	username="admin"
+	password="ClouD##60"
+	user_domain_id="default"
+	project_domain_id="default"
+
+>
+	<add_project name="network" des="network"> </add_project>
+	<add_project name="system" des="system"> </add_project>
+	<add_project name="web" des="web"> </add_project>
+</vCenter>
+

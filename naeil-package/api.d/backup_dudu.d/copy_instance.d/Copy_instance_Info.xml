@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE CyberAegis[
+<!ELEMENT vCenter (#PCDATA|copy)*>
+	<!ATTLIST vCenter auth_url CDATA #IMPLIED>
+	<!ATTLIST vCenter project_name CDATA #REQUIRED>
+	<!ATTLIST vCenter username CDATA #REQUIRED>
+	<!ATTLIST vCenter password CDATA #REQUIRED>
+	<!ATTLIST vCenter user_domain_id CDATA #REQUIRED>
+	<!ATTLIST vCenter project_domain_id CDATA #REQUIRED>
+	<!ELEMENT copy (#PCDATA)>
+		<!ATTLIST copy instance_name CDATA #REQUIRED>
+		<!ATTLIST copy image_name CDATA #REQUIRED>
+		<!ATTLIST copy network CDATA #REQUIRED>
+		<!ATTLIST copy flavor CDATA #REQUIRED>
+		<!ATTLIST copy volume_size CDATA #REQUIRED>
+		<!ATTLIST copy security_group CDATA #REQUIRED>
+]>
+<vCenter>
+	<host
+		auth_url="http://192.168.214.120:5000/v3"
+		project_name="2-Team"
+		username="user02"
+		password="user02"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+		<copy instance_name="2-Team:instance-01" image_name="New-CentOS7-Minimal-origin.qcow2" network="private-01,10.0.1.20" flavor="m1.small" volume_size="10" security_group="default"> </copy>
+		<copy instance_name="2-Team:instance-02" image_name="New-CentOS7-Minimal-origin.qcow2" network="private-02" flavor="m1.small" volume_size="10" security_group="default"> </copy>
+	</host>
+
+	<host
+		auth_url="http://192.168.214.120:5000/v3"
+		project_name="1-Team"
+		username="user01"
+		password="user01"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+		<copy instance_name="1-Team:instance-01" image_name="New-CentOS7-Minimal-origin.qcow2" network="private-01,10.0.1.20" flavor="m1.small" volume_size="10" security_group="default"> </copy>
+		<copy instance_name="1-Team:instance-02" image_name="New-CentOS7-Minimal-origin.qcow2" network="private-02" flavor="m1.small" volume_size="10" security_group="default"> </copy>
+	</host>
+
+</vCenter>
+

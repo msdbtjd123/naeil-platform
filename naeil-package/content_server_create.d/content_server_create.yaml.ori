@@ -1,0 +1,103 @@
+heat_template_version: 2015-04-30
+
+description: Content Server Create
+
+parameters:
+    network_private1 :
+        type: string
+        default: network_private-01
+
+    network_private2 :
+        type: string
+        default: network_private-02
+
+    network_private3 :
+        type: string
+        default: network_private-03
+
+    system_private1 :
+        type: string
+        default: system_private-01
+
+    system_private2 :
+        type: string
+        default: system_private-02
+
+    system_private3 :
+        type: string
+        default: system_private-03
+
+    web_private1 :
+        type: string
+        default: web_private-01
+
+    web_private2 :
+        type: string
+        default: web_private-02
+
+    web_private3 : 
+        type: string
+        default: web_private-03
+
+    flavor_name_tiny :
+        type: string
+        default: cap1.tiny
+
+    flavor_name_small :
+        type: string
+        default: cap1.small
+
+    zone_server : 
+        type: string
+        default: nova
+        
+
+
+resources:
+#--------NETWORK--------#
+
+#DnsSpooFing START
+  DnsSpooFing_Attacker:
+    type: OS::Nova::Server
+    properties:
+      name: $name_dns_at1
+      image: Kali.vmdk
+      flavor: { get_param: flavor_name_small }
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: network_private-01
+
+  DnsSpooFing_Target:
+    type: OS::Nova::Server
+    properties:
+      name: $name_dns_t1
+      image: CentOS7_GW.vmdk
+      flavor: { get_param: flavor_name_small }
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: network_private-01
+#DnsSpooFing END
+
+#Port Scanning START
+  Port_Scanning_Attacker:
+    type: OS::Nova::Server
+    properties:
+      name: $name_scan_at1
+      image: CentOS7_CLI.vmdk
+      flavor: { get_param: flavor_name_small }
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: network_private-03
+
+  Port_Scanning_Target:
+    type: OS::Nova::Server
+    properties:
+      name: $name_scan_t1
+      image: CentOS7_GT.vmdk
+      flavor: { get_param: flavor_name_small }
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: network_private-03
+#SmurfAttack END
+
+#------NETWORK END-----#

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE CyberAegis[
+<!ELEMENT vCenter (#PCDATA|user_move)*>
+	<!ATTLIST vCenter auth_url CDATA #IMPLIED>
+	<!ATTLIST vCenter project_name CDATA #REQUIRED>
+	<!ATTLIST vCenter username CDATA #REQUIRED>
+	<!ATTLIST vCenter password CDATA #REQUIRED>
+	<!ATTLIST vCenter user_domain_id CDATA #REQUIRED>
+	<!ATTLIST vCenter project_domain_id CDATA #REQUIRED>
+	<!ELEMENT user_move (#PCDATA)>
+		<!ATTLIST user_move name CDATA #REQUIRED>
+		<!ATTLIST user_move now_project CDATA #REQUIRED>
+		<!ATTLIST user_move change_project CDATA #REQUIRED>
+]>
+<vCenter
+	auth_url="http://192.168.214.120:5000/v3"
+	project_name="admin"
+	username="admin"
+	password="root123"
+	user_domain_id="default"
+	project_domain_id="default"
+
+>
+	<user_move name="user01" now_project="1-Team" change_project="2-Team,member,reader"> </user_move>
+	<user_move name="lys" now_project="1-Team" change_project="2-Team,reader"> </user_move>
+</vCenter>
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE CyberAegis[
+<!ELEMENT vCenter (#PCDATA|snapshot)*>
+	<!ATTLIST vCenter auth_url CDATA #IMPLIED>
+	<!ATTLIST vCenter project_name CDATA #REQUIRED>
+	<!ATTLIST vCenter username CDATA #REQUIRED>
+	<!ATTLIST vCenter password CDATA #REQUIRED>
+	<!ATTLIST vCenter user_domain_id CDATA #REQUIRED>
+	<!ATTLIST vCenter project_domain_id CDATA #REQUIRED>
+	<!ELEMENT snapshot (#PCDATA)>
+		<!ATTLIST snapshot instance CDATA #REQUIRED>
+		<!ATTLIST snapshot snapshot CDATA #REQUIRED>
+]>
+<vCenter>
+	<host
+		enable="T"
+		auth_url="http://192.168.0.3:5000/v3"
+		project_name="network"
+		12345="admin"
+		password="capstone!23"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+		<snapshot instance="network_instance" snapshot="network_instance"> </snapshot>
+	</host>
+
+	<host
+		enable="F"
+		auth_url="http://192.168.0.3:5000/v3"
+		project_name="system"
+		username="admin"
+		password="capstone!23"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+
+		<snapshot instance="system_instance" snapshot="system_instance"> </snapshot>
+	</host>
+	<host
+		enable="T"
+		auth_url="http://192.168.0.3:5000/v3"
+		project_name="web"
+		username="admin"
+		password="capstone!23"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+		<snapshot instance="test" snapshot="test"> </snapshot>
+	</host>
+</vCenter>
+

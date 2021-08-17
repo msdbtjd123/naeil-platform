@@ -1,0 +1,63 @@
+heat_template_version: 2015-04-30
+
+description: Content Server Create
+
+parameters:
+    network_private1 :
+        type: string
+        default: network_private-01
+
+    network_private2 :
+        type: string
+        default: network_private-02
+
+    zone_server : 
+        type: string
+        default: nova
+        
+
+
+resources:
+#--------NETWORK--------#
+
+#DnsSpooFing START
+  DnsSpooFing_Attacker:
+    type: OS::Nova::Server
+    properties:
+      name: test_dns_at1
+      image: Kali.vmdk
+      flavor: m1.medium
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: network_private-01
+
+  DnsSpooFing_Target:
+    type: OS::Nova::Server
+    properties:
+      name: test_dns_t1
+      image: CentOS7_GT.vmdk
+      flavor: m1.medium
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: network_private-01
+
+#Port Scanning START
+  Port_Scanning_Attacker:
+    type: OS::Nova::Server
+    properties:
+      name: test_scan_at1
+      image: CentOS7_CLI.vmdk
+      flavor: m1.medium
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: network_private-02
+
+  Port_Scanning_Target:
+    type: OS::Nova::Server
+    properties:
+      name: test_scan_t1
+      image: CentOS7_GT.vmdk
+      flavor: m1.medium
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: network_private-02

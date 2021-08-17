@@ -1,0 +1,121 @@
+heat_template_version: 2015-04-30
+
+description: Content Server Create
+
+parameters:
+    network_private1 :
+        type: string
+        default: network_private-01
+
+    network_private2 :
+        type: string
+        default: network_private-02
+
+    network_private3 :
+        type: string
+        default: network_private-03
+
+    flavor_name_tiny :
+        type: string
+        default: cap1.tiny
+
+    flavor_name_small :
+        type: string
+        default: cap1.small
+
+    zone_server : 
+        type: string
+        default: nova
+        
+
+
+resources:
+#--------NETWORK--------#
+
+#DnsSpooFing START
+  DnsSpooFing_Attacker:
+    type: OS::Nova::Server
+    properties:
+      name: $name_dns_at1
+      image: dns_at1
+      flavor: { get_param: flavor_name_small }
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: network_private-01
+
+  DnsSpooFing_Agent:
+    type: OS::Nova::Server
+    properties:
+      name: $name_dns_a1
+      image: dns_a1
+      flavor: { get_param: flavor_name_tiny }
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: network_private-01
+
+  DnsSpooFing_Target:
+    type: OS::Nova::Server
+    properties:
+      name: $name_dns_t1
+      image: dns_t1
+      flavor: { get_param: flavor_name_small }
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: network_private-01
+#DnsSpooFing END
+
+#SynFlooDing START
+  SynFlooDing_Attacker:
+    type: OS::Nova::Server
+    properties:
+      name: $name_syn_at1
+      image: syn_at1
+      flavor: { get_param: flavor_name_small }
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: network_private-02
+
+  SynFlooDing_Target:
+    type: OS::Nova::Server
+    properties:
+      name: $name_syn_t1
+      image: syn_t1
+      flavor: { get_param: flavor_name_small }
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: network_private-02
+#SynFlooDing END
+
+#SmurfAttack START
+  SmurfAttack_Attacker:
+    type: OS::Nova::Server
+    properties:
+      name: $name_smurf_at1
+      image: smurf_at1
+      flavor: { get_param: flavor_name_small }
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: network_private-03
+
+  SmurfAttack_Agent:
+    type: OS::Nova::Server
+    properties:
+      name: $name_smurf_a1
+      image: smurf_a1
+      flavor: { get_param: flavor_name_tiny }
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: network_private-03
+
+  SmurfAttack_Target:
+    type: OS::Nova::Server
+    properties:
+      name: $name_smurf_t1
+      image: smurf_t1
+      flavor: { get_param: flavor_name_small }
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: network_private-03
+#SmurfAttack END
+
+#------NETWORK END-----#

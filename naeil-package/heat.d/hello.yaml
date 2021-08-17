@@ -1,0 +1,59 @@
+heat_template_version: 2015-04-30
+
+description: Simple template to deploy a single compute instance
+
+resources:
+    my_instance:
+        type: OS::Nova::Server
+        properties:
+            key_name: my_key
+            image: c7-minimal
+            flavor: cap1.tiny
+#--------------------------------------------------------------------------------------
+
+parameters:
+    key_name:
+        type: string
+        label: key Name
+        description: Name of key-pair to be used for compute instance
+        default: $KEY_ID
+
+    image_id:
+        type: string
+        label: Image ID
+        description: Image to be used for compute instance
+        default: c7-minimal
+
+    instance_type:
+        type: string
+        label: Instance Type
+        description: Type of instance (Flavor) to be used
+        default: cap1.tiny          #사용자가 값을 입력 안 했을경우
+            - allowed_values: [ m1.medium, m1.large, m1.xlarge ]        #사용자 입력 값을 제한 할 수 있다.
+              description: Value must be one of m1.medium, m1.large or m1.xlarge.
+
+    database_password:
+        type: string
+        label: databases password input 
+        description: des
+        hidden: true        #사용자가 값을 입력 할때 passwd 처럼 값이 출력x
+            - length: { min: 6, max: 8 }
+              description: Password length must be between 6 and 8 characters.
+            - allowed_pattern: "[a-zA-Z0-9]+"       #정규표현식으로 값의 형식도 제한 가능하다.
+              description: Password must consist of characters and numbers only.
+            - allowed_pattern: "[A-Z]+[a-zA-Z0-9]*"     #위과 동시에 여러 제약조건을 걸 수도 있다.
+              description: Password must start with an uppercase character.
+
+resources:
+    my_instance:
+        type: OS::Nova::Server
+        properties:
+            key_name: { get_param: key_name }
+            image: { get_param: image_id }
+            flavor: { get_param: instance_type }
+
+
+output:
+    instance_ip:
+        description: The IP address of the deployed instance
+        value: { get_attr: [my_instance, first_addess] }

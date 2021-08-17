@@ -1,0 +1,37 @@
+heat_template_version: 2015-04-30
+
+description: Content Server Create
+
+parameters:
+    system_private1 :
+        type: string
+        default: system_private-01
+
+    system_private3 :
+        type: string
+        default: system_private-03
+
+    zone_server : 
+        type: string
+        default: nova
+
+resources:
+  BackDoor_Attacker:
+    type: OS::Nova::Server
+    properties:
+      name: test_back_at1
+      image: CentOS7_CLI.vmdk
+      flavor: m1.small
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: system_private-01
+
+  Password_Attacker:
+    type: OS::Nova::Server
+    properties:
+      name: test_passwd_at1
+      image: CentOS7_CLI.vmdk
+      flavor: m1.small
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: system_private-03

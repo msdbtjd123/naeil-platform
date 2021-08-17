@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE CyberAegis[
+<!ELEMENT vCenter (#PCDATA|change)*>
+	<!ATTLIST vCenter auth_url CDATA #IMPLIED>
+	<!ATTLIST vCenter project_name CDATA #REQUIRED>
+	<!ATTLIST vCenter username CDATA #REQUIRED>
+	<!ATTLIST vCenter password CDATA #REQUIRED>
+	<!ATTLIST vCenter user_domain_id CDATA #REQUIRED>
+	<!ATTLIST vCenter project_domain_id CDATA #REQUIRED>
+	<!ELEMENT change (#PCDATA)>
+		<!ATTLIST change instance_name CDATA #REQUIRED>
+		<!ATTLIST change target CDATA #REQUIRED>
+		<!ATTLIST change network CDATA #REQUIRED>
+		<!ATTLIST change ip CDATA #REQUIRED>
+]>
+<vCenter>
+	<host
+		auth_url="http://192.168.214.120:5000/v3"
+		project_name="Dev_Project-1"
+		username="lys"
+		password="root123"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+		<change instance_name="instance-1" target="instance-1-snapshot"> </change>
+	</host>
+
+	<host
+		auth_url="http://192.168.214.120:5000/v3"
+		project_name="1-Team"
+		username="user01"
+		password="root123"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+		<change instance_name="instance-1" target="instance-1-snapshot"> </change>
+	</host>
+
+</vCenter>
+

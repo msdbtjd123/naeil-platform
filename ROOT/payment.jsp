@@ -6,7 +6,7 @@
 	String driver = "org.mariadb.jdbc.Driver";
 	String url = "jdbc:mariadb://localhost:3306/capstone_db";
 	String uid = "capstone_admin";
-	String upw = "Capstone!2#";
+	String upw = "$PASSWD";
 	int check = 0;
 	
 	Connection connection = null;

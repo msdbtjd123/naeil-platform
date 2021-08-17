@@ -1,0 +1,47 @@
+heat_template_version: 2015-04-30
+
+description: Content Server Create
+
+parameters:
+    web_private1 :
+        type: string
+        default: web_private-01
+
+    web_private3 : 
+        type: string
+        default: web_private-03
+
+    zone_server : 
+        type: string
+        default: nova
+
+resources:
+  XSS_Attacker:
+    type: OS::Nova::Server
+    properties:
+      name: $name_xss_at1
+      image: CentOS7_GWJ.vmdk
+      flavor: m1.medium
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: web_private-01
+
+  Replay_Attacker:
+    type: OS::Nova::Server
+    properties:
+      name: $name_replay_at1
+      image: Kali.vmdk
+      flavor: m1.medium
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: web_private-03
+
+  Replay_Target:
+    type: OS::Nova::Server
+    properties:
+      name: $name_replay_t1
+      image: CentOS7_GWJ.vmdk
+      flavor: m1.medium
+      availability_zone: { get_param: zone_server }
+      networks:
+        - network: web_private-03

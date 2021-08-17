@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE CyberAegis[
+<!ELEMENT vCenter (#PCDATA|export_image)*>
+	<!ATTLIST vCenter auth_url CDATA #IMPLIED>
+	<!ATTLIST vCenter project_name CDATA #REQUIRED>
+	<!ATTLIST vCenter username CDATA #REQUIRED>
+	<!ATTLIST vCenter password CDATA #REQUIRED>
+	<!ATTLIST vCenter user_domain_id CDATA #REQUIRED>
+	<!ATTLIST vCenter project_domain_id CDATA #REQUIRED>
+	<!ELEMENT export_image (#PCDATA)>
+		<!ATTLIST export_image volume_id CDATA #REQUIRED>
+		<!ATTLIST export_image format CDATA #REQUIRED>
+		<!ATTLIST export_image image_name CDATA #REQUIRED>
+		<!ATTLIST export_image path CDATA #REQUIRED>
+]>
+<vCenter
+	auth_url="http://192.168.214.120:5000/v3"
+	project_name="Dev_Project-1"
+	username="lys"
+	password="root123"
+	user_domain_id="default"
+	project_domain_id="default"
+>
+	<export_image volume_id="f3123814-dcf2-429a-94c8-af1cec889563" format="qcow2" image_name="test1.qcow2" path="/root/openstack.d/images.d/"> </export_image>
+	<export_image volume_id="766c7b5a-1f8a-45a7-bfff-58e9c2d09dd9" format="qcow2" image_name="test2.qcow2" path="/root/openstack.d/images.d/"> </export_image>
+
+</vCenter>
+

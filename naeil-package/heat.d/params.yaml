@@ -1,0 +1,11 @@
+parameters:
+  demo_net_name : priv_net
+  demo_net_cidr: 10.10.30.0/24
+  demo_net_gateway : 10.10.30.1
+  demo_net_pool_start : 10.10.30.10
+  demo_net_pool_end : 10.10.30.200
+  demo_ext_net_name : public-01
+  demo_image_name : c7-minimal
+  demo_flavor_name : cap1.small
+  demo_server_name : heat01
+  demo_zone_server : nova

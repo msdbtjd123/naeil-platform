@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE CyberAegis[
+<!ELEMENT vCenter (#PCDATA|add_router)*>
+	<!ATTLIST vCenter auth_url CDATA #IMPLIED>
+	<!ATTLIST vCenter project_name CDATA #REQUIRED>
+	<!ATTLIST vCenter username CDATA #REQUIRED>
+	<!ATTLIST vCenter password CDATA #REQUIRED>
+	<!ATTLIST vCenter user_domain_id CDATA #REQUIRED>
+	<!ATTLIST vCenter project_domain_id CDATA #REQUIRED>
+	<!ELEMENT add_router (#PCDATA)>
+		<!ATTLIST add_router name CDATA #REQUIRED>
+]>
+<vCenter>
+	<host
+		auth_url="http://203.252.240.80:5000/v3"
+		project_name="network"
+		username="admin"
+		password="ClouD##60"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+
+		<add_router name="network_router-01" subnet="network_private-01_sub"> </add_router>
+		<add_router name="network_router-02" subnet="network_private-02_sub"> </add_router>
+		<add_router name="network_router-03" subnet="network_private-03_sub"> </add_router>
+	</host>
+
+	<host
+		auth_url="http://203.252.240.80:5000/v3"
+		project_name="system"
+		username="admin"
+		password="ClouD##60"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+
+		<add_router name="system_router-01" subnet="system_private-01_sub"> </add_router>
+		<add_router name="system_router-02" subnet="system_private-02_sub"> </add_router>
+		<add_router name="system_router-03" subnet="system_private-03_sub"> </add_router>
+	</host>
+
+	<host
+		auth_url="http://203.252.240.80:5000/v3"
+		project_name="web"
+		username="admin"
+		password="ClouD##60"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+
+		<add_router name="web_router-01" subnet="web_private-01_sub"> </add_router>
+		<add_router name="web_router-02" subnet="web_private-02_sub"> </add_router>
+		<add_router name="web_router-03" subnet="web_private-03_sub"> </add_router>
+	</host>
+</vCenter>
+

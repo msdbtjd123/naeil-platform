@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE CyberAegis[
+<!ELEMENT vCenter (#PCDATA|add_private)*>
+	<!ATTLIST vCenter auth_url CDATA #IMPLIED>
+	<!ATTLIST vCenter project_name CDATA #REQUIRED>
+	<!ATTLIST vCenter username CDATA #REQUIRED>
+	<!ATTLIST vCenter password CDATA #REQUIRED>
+	<!ATTLIST vCenter user_domain_id CDATA #REQUIRED>
+	<!ATTLIST vCenter project_domain_id CDATA #REQUIRED>
+	<!ELEMENT add_private (#PCDATA)>
+		<!ATTLIST add_private name CDATA #REQUIRED>
+		<!ATTLIST add_private subnet_name CDATA #REQUIRED>
+		<!ATTLIST add_private subnet_ranger CDATA #REQUIRED>
+		<!ATTLIST add_private gateway CDATA #REQUIRED>
+		<!ATTLIST add_private dns CDATA #REQUIRED>
+		<!ATTLIST add_private des CDATA #REQUIRED>
+]>
+<vCenter>
+	<host
+		auth_url="http://203.252.240.80:5000/v3"
+		project_name="network"
+		username="admin"
+		password="ClouD##60"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+
+		<add_private name="network_private-01" subnet_name="network_private-01_sub" subnet_range="10.0.0.0/24" gateway="10.0.0.1" dns="203.252.225.5" des="DNS Spoofing"> </add_private>
+		<add_private name="network_private-02" subnet_name="network_private-02_sub" subnet_range="10.0.1.0/24" gateway="10.0.1.1" dns="203.252.225.5" des="SYN Flooding"> </add_private>
+		<add_private name="network_private-03" subnet_name="network_private-03_sub" subnet_range="10.0.2.0/24" gateway="10.0.2.1" dns="203.252.225.5" des="Smurf Attack"> </add_private>
+	</host>
+
+	<host
+		auth_url="http://203.252.240.80:5000/v3"
+		project_name="system"
+		username="admin"
+		password="ClouD##60"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+
+		<add_private name="system_private-01" subnet_name="system_private-01_sub" subnet_range="10.1.0.0/24" gateway="10.1.0.1" dns="203.252.225.5" des="Back Door"> </add_private>
+		<add_private name="system_private-02" subnet_name="system_private-02_sub" subnet_range="10.1.1.0/24" gateway="10.1.1.1" dns="203.252.225.5" des="Scanning Attack"> </add_private>
+		<add_private name="system_private-03" subnet_name="system_private-03_sub" subnet_range="10.1.2.0/24" gateway="10.1.2.1" dns="203.252.225.5" des="Password Crack"> </add_private>
+	</host>
+	<host
+		auth_url="http://203.252.240.80:5000/v3"
+		project_name="web"
+		username="admin"
+		password="ClouD##60"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+
+		<add_private name="web_private-01" subnet_name="web_private-01_sub" subnet_range="10.2.0.0/24" gateway="10.2.0.1" dns="203.252.225.5" des="XSS"> </add_private>
+		<add_private name="web_private-02" subnet_name="web_private-02_sub" subnet_range="10.2.1.0/24" gateway="10.2.1.1" dns="203.252.225.5" des="SQL Injection"> </add_private>
+		<add_private name="web_private-03" subnet_name="web_private-03_sub" subnet_range="10.2.2.0/24" gateway="10.2.2.1" dns="203.252.225.5" des="Replay Attack"> </add_private>
+	</host>
+</vCenter>
+

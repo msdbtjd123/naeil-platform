@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE CyberAegis[
+<!ELEMENT vCenter (#PCDATA|attach_floating)*>
+	<!ATTLIST vCenter auth_url CDATA #IMPLIED>
+	<!ATTLIST vCenter project_name CDATA #REQUIRED>
+	<!ATTLIST vCenter username CDATA #REQUIRED>
+	<!ATTLIST vCenter password CDATA #REQUIRED>
+	<!ATTLIST vCenter user_domain_id CDATA #REQUIRED>
+	<!ATTLIST vCenter project_domain_id CDATA #REQUIRED>
+	<!ELEMENT attach_floating (#PCDATA)>
+		<!ATTLIST attach_floating ip CDATA #REQUIRED>
+]>
+<vCenter>
+	<host
+		enable="F"
+		auth_url="http://192.168.0.3:5000/v3"
+		project_name="network"
+		username="admin"
+		password="capstone!23"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+		<attach_floating ip="192.168.0.100" name="network_instance"> </attach_floating>
+	</host>
+
+	<host
+		enable="F"
+		auth_url="http://192.168.0.3:5000/v3"
+		project_name="system"
+		username="admin"
+		password="capstone!23"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+
+		<attach_floating ip="192.168.0.100" name="system_instance"> </attach_floating>
+	</host>
+	<host
+		enable="T"
+		auth_url="http://192.168.0.3:5000/v3"
+		project_name="web"
+		username="admin"
+		password="capstone!23"
+		user_domain_id="default"
+		project_domain_id="default"
+	>
+		<attach_floating ip="192.168.0.100" name="test"> </attach_floating>
+	</host>
+</vCenter>
+
