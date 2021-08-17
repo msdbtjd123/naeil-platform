@@ -4,8 +4,8 @@
 
 - [Sections](#sections)
   - [Title](#Title)
-  - [What is Naeil Platform?](#What-is-Naeil-Platform?)
-  - [How to Use?](#How-to-Use?)
+  - [What is Naeil Platform?](#what-is-naeil-platform?)
+  - [How to Use?](#how-to-use?)
   - [Web Images](#Web-Images)
   - [Utilization Technology](#Utilization-Technology)
 
