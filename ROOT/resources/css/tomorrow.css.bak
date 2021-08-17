@@ -1,0 +1,671 @@
+@font-face {
+  font-family: NanumSquareB;
+  src: url('/resources/fonts/NanumSquare_acB.ttf') format('truetype');
+  unicode-range: U+0-10FFFF;
+}
+
+@font-face {
+  font-family: NanumSquareL;
+  src: url('/resources/fonts/NanumSquare_acL.ttf') format('truetype');
+  unicode-range: U+0-10FFFF;
+}
+*{
+    box-sizing: border-box;
+    /* font-family:'Malgun Gothic'; */
+    /* font-family:'NanumSquare'; */
+    font-family:'NanumSquareB';
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    border-spacing: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+article{ /* 내용물 모두 감싸는 상위 박스 */
+    width: 100vw;
+}
+
+/* 헤더 시작 */
+header{     /* 제일 윗 부분 */
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background: #ffffff;
+}
+
+#wordpage_header{     /* 제일 윗 부분 (용어사전 페이지 헤더) */
+    height: 60px;
+    background: #282c34;
+    color: #f6f5f5;
+    padding-top: 5px;
+}
+
+#small_header{
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    padding: 15px 50px 10px 50px;
+    text-align: left;
+}
+
+
+
+/* 로고 시작 */
+#logo_box{/* 내일 logo 감싸는 박스 */
+    position: absolute;
+    display: inline-block;
+    max-height: 50px;
+    cursor: pointer;
+
+    left: 3%;
+}
+#logo_box img{
+    float: left;
+    height: 50px;
+    margin-right: 5px;
+}
+#logo_box #logo_txt{
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    text-align: left;
+}
+#logo_box #logo_txt_left{
+    position: absolute;
+    font-size: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#logo_box #logo_txt_right{
+    position: absolute;
+    left: 41%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    letter-spacing: -1px;
+    line-height: 12px;
+}
+/* 로고 끝 */
+
+
+/* 가운데 탭들 시작*/
+#tab_box{ /* 탭들 감싸는 박스 */
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 50px;
+}
+.tab_item{ /* 탭 각각 글자 박스*/
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 900;
+    margin-right: 50px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.dict_btn{
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* margin-left: 15%; */
+    margin-left: 280px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#282c34, #282c34), linear-gradient( to top, #3d87c2, #33ff33 );
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
+}
+/* 가운데 탭들 끝 */
+
+
+/* 탭들 오른쪽 로그인 회원가입 등 시작 */
+#account_box{
+    position: absolute;
+    display: inline-block;
+    padding: 10px;
+    
+    right: 3%;
+}
+.login_item{
+    font-family:'NanumSquareL';
+    display: inline-block;
+    height: 50px;
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.login_item > a{
+	color: #53575e;
+	text-decoration: none;
+}
+.login_item > a:hover{
+	color: #5f81bf;
+}
+.console_btn{
+    display: inline-block;
+    width: 80px;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 25px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    color: white;
+    background: black;
+	font-size: 14px;
+}
+/* 탭들 오른쪽 로그인 회원가입 등 끝 */
+/* 헤더 끝 */
+
+
+
+
+#big_contain{ /* 헤더, 푸터 제외 모든 내용 바깥 큰박스 (소개페이지)*/
+    position: relative;
+    width: 100%;
+}
+
+#main_big_img_wrapper{ /* 메인 큰 이미지 박스 */
+    position: relative;
+    width: 100%;
+    text-align: left;
+    background-image: url('/resources/images/메인화면/메인페이지_배경.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 85%;
+}
+#main_big_img_wrapper > div{
+    width: 1200px;
+    height: 100%;
+    padding-top: 160px;
+    padding-left: 30px;
+    margin: 0 auto;
+}
+#main_big_img_wrapper p, #main_big_img_wrapper2 p{ /* 메인 큰 이미지 위에 글자 */
+    color: #f0f0f0;
+}
+
+#main_big_img_wrapper2 { /* 메인 큰 이미지 박스 (실습페이지)*/
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    background: #000f1a;
+}
+#main_big_img_wrapper2 > div{ /* 메인 큰 이미지 박스 */
+    position: relative;
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #000f1a;
+    background-image: url('/resources/images/실습_페이지/최종_실습_페이지_배경.png');
+    background-repeat: no-repeat;
+    box-shadow: -25px 0 28px -8px #000f1a inset, 25px 0 28px -8px #000f1a inset;
+    background-size: 100%;
+    background-position: center 50%;
+    padding-top: 65px;
+}
+.main_big_img{ /* 메인 큰 이미지 */
+    width: 100%;
+    z-index: 100;
+}
+
+/* nav_bar 얘네들 다 실습페이지 */
+#nav_bar{
+    height: 70px;
+    background: #282c34;
+}
+#nav_bar .nav_item{ 
+    display: inline-block;
+    height: 12px;
+    margin: 0 25px;
+    vertical-align: middle;
+    color: #e7e7e7;
+    font-size: 90%;
+    font-weight: bold;
+}
+#nav_bar img{
+    float: left;
+    height: 35px;
+    margin-top: 14px;
+    margin-right: 10px;
+}
+.nav_item div{
+    display: table-cell;
+    height: 65px;
+    vertical-align: middle;
+    text-align: left;
+	font-family: NanumSquareL;
+}
+
+
+#small_contain{
+    width: 100%;
+    background: #f0f0f0;
+    box-shadow: inset 0 -5px 10px -2px #ccc;
+}
+
+#left_contain{ /* 용어사전페이지 왼쪽 탭 */
+    position: relative;
+    display: inline-block;
+    width: 18%;
+    min-height: 500px;
+    padding: 30px;
+    background: white;
+    border-right: 2px solid #e1e0e0;
+    vertical-align: top;
+    text-align: left;
+    font-weight: bold;
+}
+#right_contain{ /* 용어사전페이지 왼쪽 탭 */
+    position: relative;
+    display: inline-block;
+    width: 81%;
+    min-height: 500px;
+    padding: 50px;
+    background: white;
+    vertical-align: top;
+    text-align: left;
+    font-weight: bold;
+}
+
+#detail_box{ /* 언제 어디서나 컴퓨터만있다면 여기부분 (소개 페이지) */
+    width: 1200px;
+    height: 600px;
+    color: #1e232e;
+    padding-top: 150px;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: right;
+}
+
+
+/* contain 얘네들 다 실습페이지 */
+#contain_column_box{
+    position: relative;
+    width: 1200px;
+}
+
+.contain_column{
+    display: inline-block;
+    width: 30%;
+    margin-left: 15px;
+    margin-right: 15px;
+    vertical-align: top;
+	padding-bottom: 100px;
+}
+
+.contain_title{
+    height: 65px;
+    line-height: 65px;
+    font-size: 20px;
+    font-weight: bold;
+	color: #1e232e
+}
+.contain_row{
+    text-align: left;
+    margin-bottom: 5px;
+    padding: 13px;
+    border: 1px solid #e0e0e0;
+    background: white;
+}
+
+/* 항목 제목 */
+.contain_row div:nth-child(1){
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 5px;
+}
+/* Disabled, Available */
+.contain_row div:nth-child(2){
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    padding: 0 10px;
+    height: 16px;
+    font-size: 11px;
+    line-height: 16px;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+.status_disabled{
+    background: #1e232e;
+    color: white;
+}
+.status_available{
+    background: #25c452;
+    color: white;
+}
+/* 항목 내용 */
+.contain_row div:nth-child(3){
+	font-family: NanumSquareL;
+    margin: 15px auto;
+    color: #797a7d;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: pre-wrap;
+    line-height: 20px;
+}
+/* 실습하기 */
+.contain_row div:nth-child(4){
+    font-size: 17px;
+    font-weight: 900;
+    color: #2a58be;
+    cursor: pointer;
+}
+
+
+
+#login_contain{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( to right top, #75a6de, #55d377 );
+}
+#login_box{
+    position: absolute;
+    width: 25%;
+    height: 55%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: -1px 1px 100px -50px black, 1px -1px 100px -50px black;
+}
+#login_top{
+    position: relative;
+    width: 100%;
+    height: 12%;
+    background: #1e232e;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#login_bottom{
+    width: 100%;
+    height: 88%;
+    background: #ededed;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#login_form{
+    position: relative;
+    height: 85%;
+    padding: 12% 1% 5% 1%;
+}
+.login_input_box{
+    width: 75%;
+    height: 15%;
+    margin-bottom: 3%;
+    background: #f0f0f0;
+    border: 1px solid #c7c7c7;
+    border-radius: 20px;
+}
+.login_input_box input{
+    width: 90%;
+    height: 100%;
+    border: none;
+    background: none;
+	font-family: NanumSquareL;
+}
+.login_input_box input[type=password]{
+	/*font-family: NanumSquareL;*/
+}
+.login_input_box input:focus{
+    outline: none;
+}
+.login_input_box input::placeholder{
+    color: #b4b2b2;
+    letter-spacing: 2px;
+}
+
+#login_form #save_id{
+    float: left;
+    margin-top: 10px;
+    margin-left: 13%;
+}
+#login_form #save_id span{
+    margin-left: 10px;
+    color: #1e232e;
+    font-size: 14px;
+}
+#login_form #save_id #save_id_chk{
+    display: none;
+    height: 16px;
+}
+#login_form #save_id #save_id_chk + label{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+    outline: 1px solid #c7c7c7;
+}
+
+#login_form #save_id #save_id_chk:checked + label:after{
+    content: '\2714';
+    font-size: 14px;
+}
+
+
+#login_btn{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    border-radius: 40px;
+    background: linear-gradient( to right top, #75a6de, #55d377 );
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    color: #f0f0f0;
+    line-height: 80px;
+}
+/* 로그인 창 맨 아래 회원가입 아이디찾기 비밀번호찾기 */
+#login_bottom > div:nth-child(2){
+    width: 100%;
+    height: 100%;
+}
+#login_bottom > div:nth-child(2) div{
+    display: inline-block;
+    margin: 15px 15px;
+    font-weight: 900;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+
+/* 로그인페이지 전용 */
+/* 로고 시작 */
+#login_box #logo_box{/* 내일 logo 감싸는 박스 */
+    position: absolute;
+    display: inline-block;
+    max-height: 50px;
+    cursor: pointer;
+
+    left: 50%;
+    transform: translateX(-50%);
+}
+#login_box #logo_box img{
+    float: left;
+    height: 35px;
+    margin-top: 7px;
+    margin-right: 5px;
+}
+#login_box #logo_box #logo_txt{
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    margin-top: 12px;
+    
+    color: #f6f5f5;
+}
+#login_box #logo_box #logo_txt_left{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    font-size: 26px;
+    font-weight: bold;
+}
+#login_box #logo_box #logo_txt_right{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    text-align: left;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    line-height: 12px;
+}
+/* 로고 끝 */
+/* 로그인페이지 전용 */
+
+
+
+.back_line{
+    box-shadow: inset 0 -21px 0 rgba(39,110,188,.6);
+	padding-left: 8px;
+}
+
+
+footer{
+    position: relative;
+    width: 100%;
+    height: 120px;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    background: white;
+}
+.footer_tab_box{
+    position: absolute;
+    width: 1200px;
+    top: 46%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.footer_tab{
+    float: left;
+    margin-right: 50px;
+    color: #1e232e;
+    cursor: pointer;
+}
+.footer_tab_box img{
+    float: right;
+    height: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+@media ( max-width: 1500px ) {
+    #login_box{
+        position: absolute;
+        width: 40%;
+        height: 55%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: -1px 1px 100px -50px black, 1px -1px 100px -50px black;
+    }
+}
+
+/* 모바일용 (반응형 웹) */
+@media ( max-width: 1025px ) {
+    body{
+        overflow-x: scroll;
+    }
+    article{
+        /* width: 90vw; */
+    }
+    #wordpage_header div{
+        position: relative;
+        width: 100%;
+    }
+    #small_header{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 15px 50px 10px 50px;
+        text-align: left;
+    }
+    .tab_item{ /* 학교소개 학교홍보 이런거 각각*/
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        font-weight: bold;
+        margin-right: 20px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    #login_box{
+        position: absolute;
+        width: 70%;
+        height: 55%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: -1px 1px 100px -50px black, 1px -1px 100px -50px black;
+    }
+
+    #main_big_img_wrapper2 > div{ /* 메인 큰 이미지 박스 */
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #000f1a;
+        background-image: url('/resources/images/실습_페이지/최종_실습_페이지_배경.png');
+        background-repeat: no-repeat;
+        box-shadow: -25px 0 28px -8px #000f1a inset, 25px 0 28px -8px #000f1a inset;
+        background-size: 100%;
+        background-position: center 48%;
+    }
+    #main_big_img_wrapper > div{
+        width: 100%;
+        height: 100%;
+        padding-top: 160px;
+        padding-left: 30px;
+        margin: 0 auto;
+    }
+    #detail_box{ /* 초청학교 설명회 이런거 있는 큰 박스 */
+        width: 100%;
+        height: 400px;
+        color: #1e232e;
+        padding-top: 150px;
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 38px;
+        text-align: right;
+    }
+
+    #contain_column_box{
+        width: 100%;
+    }
+
+    .footer_tab_box{
+        position: absolute;
+        width: 100%;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+  }

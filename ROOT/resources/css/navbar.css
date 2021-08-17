@@ -1,0 +1,205 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'NotoSans Light', 'Malgun Gothic', '맑은 고딕',
+		'Apple SD Gothic Neo', '돋움', dotum, sans-serif;
+	color: #666;
+}
+
+/* Header */
+
+header {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:60px;
+	min-width: 1320px;
+	border-bottom: 1px solid #e5e5e5;
+	background-color: #fff;
+}
+
+.header_content_form{
+	width: 85%;
+	margin: 0 auto;
+}
+
+.title{
+	position: absolute;
+	font-size: 30px;
+	line-height: 50px;
+	float: left;
+}
+
+.title a{
+	text-decoration: none;
+}
+
+.main_menu_form{
+	position: absolute;
+	display: inline-block;
+	width: fit-content;
+	height: auto;
+	left: 50%;
+	top: 50%;
+	-ms-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.main_menu{
+	display: inline-block;
+}
+
+.main_menu li {
+	display: inline-block;
+	margin: 15px;
+	font-size: 22px;
+	cursor:pointer;
+	font-weight: 600;
+}
+
+.main_menu li a:hover{
+	color: #39ace7;
+}
+
+.submenu{
+	display: inline-block;
+	
+}
+ 
+ /* Project MEnu */
+ 
+.project_form{
+	position: relative;
+	z-index: 9999;
+	width: 100%;
+	height: 270px;
+	margin: 0 auto;
+	margin-top: 60px;
+	text-align: center;
+	background: #fff;
+}
+
+.project_form_sub1{
+	margin: 0 auto;
+	width:fit-content;
+	height: 100%;
+	background: #fff;
+}
+
+.project_form_sub2{
+	height: 270px;
+	list-style: none;
+	display: table-cell;
+	width: 300px;
+	border: 1px solid #e5e5e5;
+}
+
+.project_form_sub2 li{
+	list-style: none;
+}
+
+.project_form_sub2 li:hover{
+	color: #39ace7;
+}
+
+.navbar_form_title{
+	font-weight: 600;
+	font-size: 22px;
+	margin-top: 40px;
+}
+
+.form_content{
+	margin-top: 15px;
+	cursor:pointer;
+}
+
+
+/* Manager MEnu */
+ 
+.manage_form{
+	position: relative;
+	z-index: 9999;
+	width: 100%;
+	height: 270px;
+	margin: 0 auto;
+	margin-top: 60px;
+	text-align: center;
+	background: #fff;
+}
+
+.manage_form_sub1{
+	margin: 0 auto;
+	width:fit-content;
+	height: 100%;
+	background: #fff;
+}
+
+.manage_form_sub2{
+	height: 270px;
+	list-style: none;
+	display: table-cell;
+	width: 300px;
+	border: 1px solid #e5e5e5;
+}
+
+.manage_form_sub2 li{
+	list-style: none;
+}
+
+.manage_form_sub2 li:hover{
+	color: #39ace7;
+}
+
+.form_content{
+	margin-top: 15px;
+	cursor:pointer;
+}
+
+/* Auth Menu */
+ 
+.auth_form{
+	position: relative;
+	z-index: 9999;
+	width: 100%;
+	height: 270px;
+	margin: 0 auto;
+	margin-top: 60px;
+	text-align: center;
+	background: #fff;
+}
+
+.auth_form_sub1{
+	margin: 0 auto;
+	width:fit-content;
+	height: 100%;
+	background: #fff;
+}
+
+.auth_form_sub2{
+	height: 270px;
+	list-style: none;
+	display: table-cell;
+	width: 300px;
+	border: 1px solid #e5e5e5;
+}
+
+.auth_form_sub2 li{
+	list-style: none;
+}
+
+.auth_form_sub2 li:hover{
+	color: #39ace7;
+}
+
+.form_content{
+	margin-top: 15px;
+	cursor:pointer;
+}
+
+
+
+
+

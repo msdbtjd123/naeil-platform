@@ -1,0 +1,30 @@
+1. 윈도우 사용자 권한 통제 방법으로서 낮은 권한을 가진 사용자가 관리자 권한을 쓰려고 하면 경고창과 함께 관리자 계정 인증을 요구한다. 이러한 매커니즘을 무엇이라고 하는가?
+①Privileged Account Management
+②User Account Control
+③User Access Control
+④Privileged Access Management
+
+4. 리눅스 시스템에서 시스템의 주요 설정파일이 위치한 디렉토리와 임시파일을 저장하는 디렉토리, 물리적 장치가 파일화되어 저장된 디렉토리를 나열한 것은?
+①/etc /temp /mnt
+②/sys /tmp /mnt
+③/sys /temp /dev
+④/etc /tmp /dev
+
+7. 다음은 어떠한 파일시스템에 대한 설명이다. 설명하고 있는 파일 시스템을 고르시오.
+리눅스 운영체제를 목표로 만들어진 첫 번째 파일 시스템으로, Remy Card가 MFS(MINIX FIle System)의 한계를 극복하기 위해 개발하였다. 최대 용량을 2GB까지 늘렸고 파일이름의 최대 길이는 255자 까지 지원한다. 오래 사용하면 파일 시스템의 단편화가 발생한다는 단점이 있다.
+①FAT16
+②MFS
+③NTFS
+④EXT
+
+10. 다음 중 리눅스 시스템에서 좀비 프로세스를 찾기 위해 사용할 수 있는 명령어로 옳은 것 2가지를 선택하시오.
+①ps -ef | grep defunct
+②top -b -n 1 | grep defunct
+③ps -ef | grep zombie
+④top -b -n 1 | grep zombie
+
+12. 다음 저장장치 중 휘발성이 가장 높은 저장장치는?
+①보조기억장치 파일
+②임시 인터넷 파일
+③ARP Cache, rouring table
+④레지스터, 캐시

@@ -1,0 +1,5 @@
+윈도우 NTFS에서 모든 파일들과 디렉터리에 대한 정보를 포함하고 있는 것은?
+1. MFT(Master File Table)
+2. FAT(File Allocation Table)
+3. $Attr Def
+4. $LogFile

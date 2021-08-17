@@ -1,0 +1,586 @@
+@font-face { font-family: 'NanumBarunGothic';
+src: url('/resources/fonts/NanumBarunGothic.eot');
+src: url('/resources/fonts/NanumBarunGothic.eot') format('embedded-opentype'),
+url('/resources/fonts/NanumBarunGothic.woff') format('woff');}
+
+
+*{
+    box-sizing: border-box;
+    //font-family:'Malgun Gothic';
+	//font-family: 'NanumSquare', sans-serif;
+	font-family:'NanumBarunGothic';
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    border-spacing: 0;
+}
+
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+
+#layer_popup{ /* 레이어팝업 떴을 때 검은 투명화면 */
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9000;
+    background:#000;
+    display:none;
+}
+#popup_window{ /* 레이어 팝업 흰 창 자체 */
+    position:absolute;
+    width:500px;
+    left:50%;
+    transform:translateX(-50%);
+    top:100px;
+    z-index:10000;
+    text-align:center;
+    background:white;
+    display:none;
+}
+#popup_close_button{ /* 레이어 팝업 닫기버튼*/
+    float:right;
+    margin-right:10px;
+	font-weight: bold;
+	font-family: TmonMonsori, "맑은 고딕";
+	font-size: 24px;
+    cursor:pointer;
+}
+#popup_title{/* 레이어 팝업 제목 */
+    position:relative;
+    display:inline-block;
+    width:400px;
+    margin:10px auto 20px;
+    text-align:center;
+	font-weight: bold;
+	font-family: TmonMonsori, "맑은 고딕";
+	font-size: 24px;
+}
+.error_msg{/* 레이어 팝업 에러메시지 */
+    display:block;
+    margin:10px auto 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color:red;
+}
+.popup_submit_button{ /* 레이어 팝업 제출버튼 */
+    width:120px;
+    height:30px;
+    margin:20px 20px;
+    border:0;
+    text-align:center;
+    font-weight: bold;
+    font-size: 14px;
+    color:white;
+    background:#071e67;
+    cursor:pointer;
+}
+#popup_window table{
+    margin:30px auto;
+    text-align:left;
+}
+#popup_window table input[type=text]{
+    width: 200px;
+    margin: 10px;
+}
+
+
+
+
+article{ /* 내용물 모두 감싸는 상위 박스 */
+    width: 1200px;
+}
+
+header{     /* 제일 윗 부분 */
+    width: 1000px;
+    position: relative;
+    height: 80px;
+    padding: 20px 50px 10px 100px;
+    text-align: left;
+    background: white;
+}
+
+#logo_box{/* openstack logo감싸는 박스 */
+    display: inline-block;
+    max-height: 50px;
+    margin-left: 50px;
+    margin-right: 150px;
+    cursor: pointer;
+}
+#logo{ /* openstack 로고 */
+    max-height: 50px;
+}
+
+#tab_box{ /* 탭들 감싸는 박스 */
+    position: absolute;
+    display: inline-block;
+}
+.tab_item{ /* 학교소개 학교홍보 이런거 각각*/
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    margin-right: 50px;
+    cursor: pointer;
+    font-size: 18px;
+	font-family: 'NanumSquare', sans-serif;
+}
+
+
+#big_contain{ /* 1200짜리 회색 박스 */
+    position: relative;
+    width: 100%;
+    height: 1200px;
+    /* background: #f8f8f8; */
+}
+
+#main_big_img_wrapper{ /* 메인 큰 이미지 박스 */
+    position: relative;
+    width: 1000px;
+    height: 300px;
+    overflow: hidden;
+    padding: 60px 80px;
+    text-align: left;
+}
+#main_big_img_wrapper p{ /* 메인 큰 이미지 위에 글자 */
+    position: relative;
+    z-index: 200;
+    color: white;
+    font-weight: 600;
+    white-space: normal;
+    letter-spacing: 3px;
+}
+.main_big_img{ /* 메인 큰 이미지 */
+    position: absolute;
+    top: -220px;
+    width: 100%;
+    height: auto;
+    left:0;
+    z-index: 100;
+}
+
+
+#small_contain{ /* 1000px짜리 투명 박스 */
+    position: absolute;
+    width: 1000px;
+    top: 310px;
+    z-index: 500;
+    left: 50%;
+    transform: translateX(-50%);
+    background: fefefe;
+}
+
+#alimy_box{ /* 학교 알리미 어쩌구 박스 */
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background: white;
+    border: 0.5px solid #efefef;
+   
+    padding: 0 10px; 
+    margin-top: -3px;
+    margin-bottom: 7px;
+    
+    font-weight: bold;
+    text-align: right;
+}
+#alimy_box > span{ /* 알리미 박스 글씨 */
+    line-height: 80px;
+    margin-left: 50px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.enroll_btn{ /* 등록하기 버튼 공통 */
+    display: inline-block;
+    width: 170px;
+    height: 50px;
+    line-height: 46px;
+    text-align: center;
+    margin: 15px 5px 15px 0;
+    border: 2px solid #276EBC;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+.enroll_btn img{ /* 등록하기 버튼 안에 아이콘 */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+#detail_box{ /* 초청학교 설명회 이런거 있는 큰 박스 */
+    width: 100%;
+}
+#detail_left_box{ /* 그림하나랑 학교 설명회 글있는 박스 */
+    float: left;
+    width: 450px;
+    height: 500px;
+    overflow: hidden;
+    /* background: #efefef; */
+    border: 0.5px solid #efefef;
+}
+#detail_left_box div{ /* 그림 제외하고 아래부분 박스 */
+    text-align: left;
+    padding: 20px;
+}
+#detail_left_box > div > div{/* 상세보기  버튼*/
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    padding: 0;
+    margin: 2px 10px;
+    vertical-align: top;
+    line-height: 30px;
+    font-size: 13px;
+    text-align: center;
+    color: #276EBC;
+    border-radius: 12px;
+    border: 1px solid #A8C5E5;
+    cursor: pointer;
+}
+#detail_left_box div b{ /* 작은 이미지 큰 글씨 */
+    display: inline-block;
+    font-size: 26px;
+    margin-bottom: 20px;
+    white-space: normal;
+}
+#detail_left_box div p{ /* 작은 이미지 작은 글씨 */
+    font-size: 15px;
+    white-space: normal;
+    letter-spacing: 1px;
+	margin-bottom: 7px;
+}
+
+#detail_box img{ /* 작은 이미지 */
+    width: auto;
+    height: 240px;
+}
+.detail_right_box{ /* 작은 정사각형 4개 */
+    display: inline-block;
+    width: 258px;
+    height: 240px;
+    background: yellow;
+    margin-left: 15px;
+    padding: 25px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    vertical-align: top;
+    white-space: normal;
+    letter-spacing: 2px;
+}
+#blank_box{ /* 박스 사이 빈 줄 */
+    width: 450px;
+    height: 20px;
+}
+
+.detail_table{ /* 박스들 안에 있는 공통 테이블 */
+    width: 205px;
+    height: 115px;
+    border-collapse: separate;
+    margin: 50px 0 10px 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+#detail_table1 td{ /* 파란놈 테이블*/
+    height: 10px;
+    padding: 5px 10px;
+    border-top: 2px solid #276EBC;
+    background: #1F5998;
+    cursor: pointer;
+}
+#detail_table2 td{ /* 노란놈 테이블 */
+    height: 15px;
+    padding: 5px 10px;
+    border-top: 2px solid #F2D00D;
+    background: #FAE886;
+    cursor: pointer;
+}
+#detail_table3 td{ /* 주황놈 테이블 */
+    height: 15px;
+    padding: 5px 10px;
+    border-top: 2px solid #FEAE11;
+    background: #FED788;
+    cursor: pointer;
+}
+.detail_right_box p{ /* 회색놈 글자 */
+    font-size: 12px;
+    font-weight: normal;
+    margin-top: 20px;
+    white-space: normal;
+    letter-spacing: 1px;
+}
+
+#nav_table{ /* 교내행사 도서관 이런거 큰 테이블 */
+    border-bottom: 2px solid grey;
+    margin: 10px 0;
+    table-layout:fixed;
+    border-collapse: collapse;
+}
+#nav_table td{
+    height: 90px;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+}
+#nav_table td img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+#nav_table td p b{
+    font-size: 18px;
+}
+#nav_table td p{
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    white-space: normal;
+    margin-top: 5px;
+}
+
+/* 이번주 달력 */
+#calender{
+    width: 1000px;
+    margin-top: 30px;
+    border-collapse: collapse;
+    text-align: center;
+    background: #276EBC;
+    color: white;
+    font-weight: bold;
+}
+#calender th{
+    height: 40px;
+    border-top: 0.5px solid white;
+    padding: 20px;
+}
+#calender td{
+    height: 40px;
+    border-top: 0.5px solid white;
+    padding: 10px;
+}
+#calender .dates{
+    width: 100px;
+}
+
+
+footer{
+    position: relative;
+    width: 1000px;
+    height: 50px;
+    margin-top: 30px;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    /*background: white;*/
+}
+#top{
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: #276EBC;
+    cursor: pointer;
+	margin-bottom: 30px;
+}
+#top img{
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    display:scroll;
+}
+
+#vnc_list_box{ /* vnc 서버 목록 박스*/
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    /*background: red;*/
+    background: white;
+    border: 0.5px solid #efefef;
+}
+
+#vnc_table td{
+    height: 90px;
+    text-align: center;
+    cursor: pointer;
+	padding: 30px;
+}
+
+#vnc_table td:hover{
+	box-shadow: 1px 5px 5px 5px #ddd;
+}
+
+#vnc_table td img{
+    width: 70px;
+    height: 70px;
+}
+
+#vnc_table td p{
+    font-weight: 600;
+    white-space: normal;
+    font-size: 20px;
+	margin-top: 10px;
+}
+
+
+#big_video_list_box{ /* 비디오 목록 박스*/
+    width: 100%;
+    min-height: 500px;
+    overflow: hidden;
+    /*background: red;*/
+    background: white;
+    border: 0.5px solid #efefef;
+}
+
+#small_video_box{ /* 학교 알리미 어쩌구 박스 */
+    position: relative;
+    width: 89%;
+    height: 70px;
+    background: white;
+    border: 0.5px solid #efefef;
+
+    padding: 0 10px;
+    margin-top: 14px;
+    margin-bottom: 7px;
+
+    text-align: right;
+}
+#small_video_box > div:not(.play_btn){
+	float: left;
+	display: table;
+	line-height: 35px;
+}
+/*
+.play_btn{ 
+    line-height: 70px;
+    margin-left: 50px;
+    font-size: 20px;
+    letter-spacing: 1px;
+	border: 1px solid red;
+}
+*/
+#small_video_box > div > span{
+	//display: table-row;
+	//border: 1px solid green;
+	//height: 10px;
+	line-height: 35px;
+    font-weight: bold;
+	font-family: 'NanumSquare', sans-serif;
+	font-size:17px;
+}
+
+#small_video_box > div > ul {
+	margin-left: 17px;
+}
+#small_video_box > div > ul > li{
+	height: 70px;
+	line-height: 70px;
+    font-weight: bold;
+	font-family: 'NanumSquare', sans-serif;
+	font-size:17px;
+	list-style-type: none;
+	display:inline-block;
+}
+
+.play_btn{ /*  영상 보기 버튼 공통 */
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+    margin: 13px 0px 13px 0;
+    border: 2px solid #276EBC;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.play_btn img{ /* 등록하기 버튼 안에 아이콘 */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+#play_video_box{ /* 비디오 플레이 뒤 박스*/
+	position:absolute;
+    width: 50%;
+    overflow: hidden;
+    background: white;
+	border-radius: 4px;
+	background-color: #ffbe00;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	height:fit-content;
+}
+
+#small_video_box > span{
+	height: 70px;
+	line-height: 40px;
+	font-family: 'NanumSquare', sans-serif;
+	font-size: 19px;
+	color: white;
+
+}
+
+.play_xbox{
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	margin-top: -12px;
+}
+
+.play_xbox > a {
+	font-family:'NanumBarunGothic';
+	display:inline-block;
+	width: 25px;
+	height: 25px;
+	line-height: 30px;
+	background-color: #f8f8f8;
+    font-weight: bold;
+    border: 1px solid #efefef;
+	border-radius: 100px;
+	
+}
+
+.quiz_box {
+    position:absolute;
+    overflow: hidden;
+    border-radius: 4px;
+    height:fit-content;
+	/*
+    top:20%;
+    left:30%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+	*/
+}
+
+.quiz_box input {
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border: 1px solid transparent;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: 0.25rem;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	text-decoration: none;
+	color: #fff;
+	background-color: #282c34;
+	border-color: #6c757d;
+	margin-top: 15px;
+
+}
+
+}

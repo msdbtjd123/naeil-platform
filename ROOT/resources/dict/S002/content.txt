@@ -1,0 +1,6 @@
+Scanning은 exploit이 가능한 상대 host와의 통신 수단 ( 즉 service들) 을 찾는 것을 뜻하며, 이는 오래전부터 자주 애용되온 방식이다.
+기본적인 idea는 되도록 많은 port를 찔러보고 그중에서 응답을 하는 port ( 즉 daemon이 있어서 service를 하는 살아있는 port) 나 자기 자신의 필요에 맞는 port를 찾는 것이다.
+이는 엄청나게 많은 광고 전단을 뿌린 후에 그것을 보고 찾아오는 사람을 기대하는 그러한 선전행위와 idea면에서 일맥상통한다.
+Scanning은 별다를 것이 아니라, 여러 protocol에 대하여 엄청나게 많은 수의 packet을 뿌리고 host의response로부터 host의 이용 가능한 service를 추출해 내는 것을 의미한다.
+Hacker의 입장에서 port scan은 attack을 실시하기 전에 상대편 host에서 어떤 service를 운영하고 있는지를 알아내는 방법이며
+여기서 얻은 정보는 과연 어떤 방법을 써서 exploit을 할 것인가를 결정하는데 큰 도움을 준다.

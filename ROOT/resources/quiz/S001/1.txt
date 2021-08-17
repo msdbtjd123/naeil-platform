@@ -1,0 +1,5 @@
+윈도우 사용자 권한 통제 방법으로서 낮은 권한을 가진 사용자가 관리자 권한을 쓰려고 하면 경고창과 함께 관리자 계정 인증을 요구한다. 이러한 매커니즘을 무엇이라고 하는가?
+1.Privileged Account Management
+2.User Account Control
+3.User Access Control
+4.Privileged Access Management

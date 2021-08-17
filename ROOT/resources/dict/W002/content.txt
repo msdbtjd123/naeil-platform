@@ -1,0 +1,9 @@
+SQL Injection 이란 Web hacking 기법 중 하나이다.
+웹 애플리케이션의 뒷단에 있는 Database에 질의(쿼리를 보내는 것)하는 과정 사이에 일반적인 값 외에 악의적인 의도를 갖는
+구문을 삽입하여 공격자가 원하는 SQL 쿼리문을 실행하는 기법이다. 주로 사용자가 입력한 데이터를 제대로 필터링, 이스케이핑 하지 못했을 경우에 발생한다.
+요즘의 거의 모든 데이터베이스 엔진은 유저 입력이 의도치 않은 동작을 하는 것을 방지하기 위해 escape 함수와 prepared statement를 제공한다.
+
+SQL Injection 공격의 종류에는 크게 세 가지 유형이 있다.
+인증 우회 (AB : Auth Bypass)
+데이터 노출 (DD : Data Disclosure)
+원격명령 실행 (RCE : Remote Command Excute)

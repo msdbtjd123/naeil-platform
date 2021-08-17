@@ -1,0 +1,5 @@
+다음 중 리눅스 시스템에서 좀비 프로세스를 찾기 위해 사용할 수 있는 명령어로 옳은 것 2가지를 선택하시오.
+1.ps -ef | grep defunct
+2.top -b -n 1 | grep defunct
+3.ps -ef | grep zombie
+4.top -b -n 1 | grep zombie

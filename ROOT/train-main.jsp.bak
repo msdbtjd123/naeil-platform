@@ -1,0 +1,107 @@
+<%@ page contentType="text/html; charset=utf-8"%>
+<%@ page import="java.lang.String"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="./resources/js/server_check.js"></script>
+</head>
+<body>
+<div id='contain_column_box'>
+	<div class='contain_column'>
+		<div class='contain_title' style='border-bottom: 4px solid #003278'>
+			Network
+		</div>
+
+		<div class='contain_row'>
+			<div>DNS Spoofing</div>
+			<div class='status_unavailable' id='dns'>Unavailable</div>
+			<div>변질된 데이터가 DNS resolver의 캐시에 유입되어 네임 서버가 유효하지 않은 결과 레코드(예: IP 주소)를 반환한다.</div>
+			<div class="training" ><a id='dns_url' href=''>실습하기 &gt;</a></div>
+		</div>
+
+		<div class='contain_row'>
+			<div>Syn Flooding</div>
+			<div class='status_unavailable' id='syn'>Unavailable</div>
+			<div>SYN Flooding은 공격자가 연결을 완료하지 않고 서버에 대한 연결을 빠르게 시작하는 서비스 거부 공격의 한 형태이다.</div>
+			<div class="training" ><a id='syn_url' href=''>실습하기 &gt;</a></div>
+		</div>
+
+		<div class='contain_row'>
+			<div>Smurf Attack</div>
+			<div class='status_unavailable' id='smurf'>Unavailable</div>
+			<div>같은 네트워크 상의 사용자들에게 Target ip로 icmp패킷을 브로드캐스트로 날려 공격대상의 서비스를 다운시키는 공격이다.</div>
+			<div class="training" ><a id='smurf_url' href=''>실습하기 &gt;</a></div>
+		</div>
+	</div>
+	
+	<div class='contain_column'>
+		<div class='contain_title' style='border-bottom: 4px solid #42bf0a'>
+			System
+		</div>
+
+		<div class='contain_row'>
+			<div>Back Door</div>
+			<div class='status_unavailable' id='back'>Unavailable</div>
+			<div>정상적인 인증 절차르 거치지않고, 컴퓨터와 암호 시스템등에 접근할 수 있도록 하는 프로그램 또는 하드웨어의 변형이다.</div>
+			<div class="training" ><a id='back_url' href=''>실습하기 &gt;</a></div>
+		</div>
+
+		<div class='contain_row'>
+			<div>Scanning Attack</div>
+			<div class='status_unavailable' id='scan'>Unavailable</div>
+			<div>네트워크 유형 유형중 DNS Spoofing 공격을 클라우드 서버내 에서 실습할 수 있습니다.</div>
+			<div class="training" ><a id='scan_url' href=''>실습하기 &gt;</a></div>
+		</div>
+
+		<div class='contain_row'>
+			<div>Password Crack</div>
+			<div class='status_unavailable' id='passwd'>Unavailable</div>
+			<div>네트워크 유형 유형중 DNS Spoofing 공격을 클라우드 서버내 에서 실습할 수 있습니다.</div>
+			<div class="training" ><a id='passwd_url' href=''>실습하기 &gt;</a></div>
+		</div>
+	</div>
+	
+	<div class='contain_column'>
+		<div class='contain_title' style='border-bottom: 4px solid #e66a6a'>
+			Web
+		</div>
+
+		<div class='contain_row'>
+			<div>XSS</div>
+			<div class='status_unavailable' id='xss'>Unavailable</div>
+			<div>네트워크 유형 유형중 DNS Spoofing 공격을 클라우드 서버내 에서 실습할 수 있습니다.</div>
+			<div class="training" ><a id='xss_url' href=''>실습하기 &gt;</a></div>
+		</div>
+
+		<div class='contain_row'>
+			<div>SQL Injection</div>
+			<div class='status_unavailable' id='sql'>Unavailable</div>
+			<div>네트워크 유형 유형중 DNS Spoofing 공격을 클라우드 서버내 에서 실습할 수 있습니다.</div>
+			<div class="training" ><a id='sql_url' href=''>실습하기 &gt;</a></div>
+		</div>
+
+		<div class='contain_row'>
+			<div>Replay Attack</div>
+			<div class='status_unavailable' id='replay'>Unavailable</div>
+			<div>네트워크 유형 유형중 DNS Spoofing 공격을 클라우드 서버내 에서 실습할 수 있습니다.</div>
+			<div class="training" ><a id='replay_url' href=''>실습하기 &gt;</a></div>
+		</div>
+	</div>
+</div>
+	<%
+	if( !(user_id.equals("")) ){
+	%>
+		<script>
+			//setTimeout(setInterval(server_check('<%=user_id%>'), 1000), 3000);
+			setTimeout(setInterval(function(){
+				server_check('<%=user_id%>');
+			}, 1000), 3000);
+		</script>
+	<%
+	}else{
+		out.print("<script>alert('로그인창으로 이동합니다');</script>");
+		response.sendRedirect("login.jsp");
+	}
+	%>
+</body>
+</html>

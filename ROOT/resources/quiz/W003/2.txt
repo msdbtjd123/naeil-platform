@@ -1,0 +1,5 @@
+TCP 헤더의 설명으로 올바른 것은?
+1.RST 플래그 : 데이터가 제대로 전송된 것을 알려준다.
+2.Window Size : 현재 상태의 최대 버퍼 크기를 말한다.
+3.Reserved : 수신된 Sequence Number에 대하여 예상된 다음 옥텟을 명시한다.
+4.FIN 플래그 : 3-Way handshaking 과정을 제의하는 플래그이다.

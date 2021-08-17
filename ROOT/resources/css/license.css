@@ -1,0 +1,50 @@
+#login_form{
+	height: 85%;
+	padding: 12% 1% 5% 1%;
+}
+#login_box{
+	height: 80%;
+}
+
+#login_top{
+	height: 10%;
+}	
+
+#login_bottom{
+	height: 93%;
+}
+
+.login_input_box{
+	height: 10%;
+	margin-bottom: 5%;
+}
+
+#login_box #login_logo_box img{
+	height: auto;
+}
+
+#login_btn{
+    transform: translate(-50%,85%);
+}
+
+.card_expire_date{
+	width: 37%;
+	display: inline-block;
+}
+.login_input_box input { 
+	text-align: center;
+	/*color: #1e232e;*/
+}
+
+.payment_amount{
+	width: 75%;
+    height: 30%;
+    margin-bottom: 7%;
+	text-align: right;
+	padding: 10px 10px 10px 0;
+	background: linear-gradient(to right, #75a6de, #55d377);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 15px;
+    /*background: red;*/
+}

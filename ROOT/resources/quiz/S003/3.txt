@@ -1,0 +1,5 @@
+프로세스의 우선순위를 변경할 때 사용하는 명령들로 알맞은 것은?
+1. nice, renice	
+2. nice, thread
+3. nohup, renice	
+4. nohup, thread

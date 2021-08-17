@@ -1,0 +1,5 @@
+다음 중 시스템 계정에 설정되는 셸로 알맞은 것은?
+1. /bin/bash		
+2. /bin/dash
+3. /bin/tcsh
+4. /sbin/nologin
