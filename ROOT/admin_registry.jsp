@@ -14,7 +14,7 @@
 	String driver = "org.mariadb.jdbc.Driver";
 	String url = "jdbc:mariadb://localhost:3306/capstone_db";
 	String uid = "capstone_admin";
-	String upw = "Capstone!2#";
+	String upw = "$PASSWD";
 
 	String userid = (String)session.getAttribute("session_userid");
 	String belong = request.getParameter("belong");

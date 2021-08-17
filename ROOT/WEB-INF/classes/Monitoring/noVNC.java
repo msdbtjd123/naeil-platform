@@ -12,7 +12,7 @@ public class noVNC {
 		String driver = "org.mariadb.jdbc.Driver";
 		String url = "jdbc:mariadb://localhost:3306/capstone_db";
 		String uid = "capstone_admin";
-		String upw = "Capstone!2#";
+		String upw = "$PASSWD";
 		ArrayList<String> temp = new ArrayList<>();
 
 		String query = "select id from user_info where id <> '"+id+"' AND admin_code='"+admin_code+"'";

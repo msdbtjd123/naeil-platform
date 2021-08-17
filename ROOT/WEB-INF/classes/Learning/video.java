@@ -11,7 +11,7 @@ public class video {
 		String driver = "org.mariadb.jdbc.Driver";
 		String url = "jdbc:mariadb://localhost:3306/capstone_db";
 		String uid = "capstone_admin";
-		String upw = "Capstone!2#";
+		String upw = "$PASSWD";
 		String file_path = "";
 
 		String query = "select * from video_info where video_id='"+id+"'";
