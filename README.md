@@ -11,20 +11,20 @@
 ## Sections
 
 - ### Title
-**Cyber Aegis Training Platform**
+    **Cyber Aegis Training Platform**
 
 
 - ### What is Naeil Platform?
 
 ![image](https://user-images.githubusercontent.com/55818230/129669660-2298e247-0c2e-4aaa-bc77-48fd9ec4f8b7.png)
 
-- Note: This is a platform that many people who dream of becoming security experts can use to improve their skills.
+    Note: This is a platform that many people who dream of becoming security experts can use to improve their skills.
 
 
 
 - ### WEb Images
- - #### Main Page
-![image](https://user-images.githubusercontent.com/55818230/129669996-c5953314-0530-4fe7-b59e-b94253bacb04.png)
+    - #### Main Page
+    ![image](https://user-images.githubusercontent.com/55818230/129669996-c5953314-0530-4fe7-b59e-b94253bacb04.png)
 
 
 
