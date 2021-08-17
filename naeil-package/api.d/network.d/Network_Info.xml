@@ -20,7 +20,7 @@
 		auth_url="http://203.252.240.80:5000/v3"
 		project_name="network"
 		username="admin"
-		password="ClouD##60"
+		password="$PASSWD"
 		user_domain_id="default"
 		project_domain_id="default"
 	>
@@ -34,7 +34,7 @@
 		auth_url="http://203.252.240.80:5000/v3"
 		project_name="system"
 		username="admin"
-		password="ClouD##60"
+		password="$PASSWD"
 		user_domain_id="default"
 		project_domain_id="default"
 	>
@@ -47,7 +47,7 @@
 		auth_url="http://203.252.240.80:5000/v3"
 		project_name="web"
 		username="admin"
-		password="ClouD##60"
+		password="$PASSWD"
 		user_domain_id="default"
 		project_domain_id="default"
 	>

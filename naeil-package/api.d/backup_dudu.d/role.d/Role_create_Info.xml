@@ -14,7 +14,7 @@
 	auth_url="http://192.168.214.120:5000/v3"
 	project_name="admin"
 	username="admin"
-	password="root123"
+	password="$PASSWD"
 	user_domain_id="default"
 	project_domain_id="default"
 

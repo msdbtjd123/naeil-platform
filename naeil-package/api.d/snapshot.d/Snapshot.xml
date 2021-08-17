@@ -17,7 +17,7 @@
 		auth_url="http://192.168.0.3:5000/v3"
 		project_name="network"
 		12345="admin"
-		password="capstone!23"
+		password="$PASSWD"
 		user_domain_id="default"
 		project_domain_id="default"
 	>
@@ -29,7 +29,7 @@
 		auth_url="http://192.168.0.3:5000/v3"
 		project_name="system"
 		username="admin"
-		password="capstone!23"
+		password="$PASSWD"
 		user_domain_id="default"
 		project_domain_id="default"
 	>
@@ -41,7 +41,7 @@
 		auth_url="http://192.168.0.3:5000/v3"
 		project_name="web"
 		username="admin"
-		password="capstone!23"
+		password="$PASSWD"
 		user_domain_id="default"
 		project_domain_id="default"
 	>

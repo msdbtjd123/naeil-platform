@@ -1,6 +1,6 @@
 unset OS_SERVICE_TOKEN
     export OS_USERNAME=admin
-    export OS_PASSWORD='ClouD##60'
+    export OS_PASSWORD='$PASSWD'
     export OS_REGION_NAME=RegionOne
     export OS_AUTH_URL=http://192.168.0.1:5000/v3
     export PS1='[\u@\h \W(keystone_admin)]\$ '

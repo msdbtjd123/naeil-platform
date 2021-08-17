@@ -16,8 +16,8 @@
 	<host
 		auth_url="http://192.168.214.120:5000/v3"
 		project_name="1-Team"
-		username="user01"
-		password="user01"
+		username="$PASSWD"
+		password="$PASSWD"
 		user_domain_id="default"
 		project_domain_id="default"
 	>
@@ -29,8 +29,8 @@
 	<host
 		auth_url="http://192.168.214.120:5000/v3"
 		project_name="2-Team"
-		username="user02"
-		password="user02"
+		username="$PASSWD"
+		password="$PASSWD"
 		user_domain_id="default"
 		project_domain_id="default"
 	>

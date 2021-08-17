@@ -16,12 +16,12 @@
 	auth_url="http://192.168.214.120:5000/v3"
 	project_name="admin"
 	username="admin"
-	password="root123"
+	password="$PASSWD"
 	user_domain_id="default"
 	project_domain_id="default"
 
 >
-	<user_move name="user01" now_project="1-Team" change_project="2-Team,member,reader"> </user_move>
+	<user_move name="$PASSWD" now_project="1-Team" change_project="2-Team,member,reader"> </user_move>
 	<user_move name="lys" now_project="1-Team" change_project="2-Team,reader"> </user_move>
 </vCenter>
 
