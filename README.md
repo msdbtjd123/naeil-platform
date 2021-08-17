@@ -1,6 +1,6 @@
 # Naeil Platform
 
-## Cyber Aegis Training Platform
+- Cyber Aegis Training Platform
 
 - [Sections](#sections)
   - [Title](#Title)
