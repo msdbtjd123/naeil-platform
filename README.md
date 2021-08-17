@@ -27,7 +27,7 @@
     - You must enter the db password for each account in the /naeil-package/openrc directory.
       ```markdown
    # /naeil-package/openrc/* 
-       ```
+      ```
 
 
 - ### WEb Images
